@@ -24,8 +24,8 @@ class CatarsePayulatam::PayulatamController < ApplicationController
         confirmation_url: confirm_payulatam_url(backer),
         language: I18n.locale.to_s
       })
-      @form = payment.form do |f|
-        "<div class=\"bootstrap-twitter\"><img src=\"http://payu.com.co/sites/all/themes/regionwithnowalletNew/public/images/global/payu@2x.png\" class=\"payulatam-icon\"><input class=\"btn btn-primary btn-large\" name=\"commit\" type=\"submit\" value=\"#{t('payulatam_submit', scope: SCOPE)}\" /></div>"
+      @form = payment.form, class: 'payment-form' do |f|
+        "<input class='payment-icon' src='/assets/lbm/payu-icon.png' type='image'>"
       end
     end
   end
