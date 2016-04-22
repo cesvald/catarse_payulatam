@@ -25,7 +25,7 @@ class CatarsePayulatam::PayulatamController < ApplicationController
         language: I18n.locale.to_s
       })
       @form = payment.form, class: 'payment-form' do |f|
-        "<input class='payment-icon' src='/assets/lbm/payu-icon.png' type='image'>"
+        "<div class='submit-wrapper'><input class='payment-icon' src='/assets/lbm/payu-icon.png' type='image'></div>"
       end
     end
   end
