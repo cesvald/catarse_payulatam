@@ -24,7 +24,7 @@ class CatarsePayulatam::PayulatamController < ApplicationController
         confirmation_url: confirm_payulatam_url(backer),
         language: I18n.locale.to_s
       })
-      @form = payment.form, class: 'payment-form' do |f|
+      @form = payment.form do |f|
         "<div class='submit-wrapper'><input class='payment-icon' src='/assets/lbm/payu-icon.png' type='image'></div>"
       end
     end
